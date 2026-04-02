@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app">
+        <header class="app-topo">
+            <h1>Minha Lista de Tarefas</h1>
+            <p id="contador" aria-live="polite"></p>
+        </header>
+
+        <section id="filtros" aria-label="Filtros de tarefas">
+            <button id="filtroTodas" type="button">Todas</button>
+            <button id="filtroPendentes" type="button">Pendentes</button>
+            <button id="filtroConcluidas" type="button">Concluidas</button>
+        </section>
+
+        <section class="controle" aria-label="Criacao de tarefas">
+            <label class="campo-tarefa">
+                <span class="campo-label">Nova tarefa</span>
+                <input id="inputTarefa" type="text" placeholder="Digite uma tarefa">
+            </label>
+            <div class="controle-acoes">
+                <button id="btnAdicionar" type="button">Adicionar</button>
+                <button id="btnLimpar" type="button">Limpar Tudo</button>
+            </div>
+        </section>
+
+        <p class="kanban-ajuda">No desktop, arraste os cards entre as colunas. No celular e tablet, toque e arraste para mover.</p>
+
+        <section class="kanban" aria-label="Quadro de tarefas">
+            <article class="coluna" id="todo">
+                <h2>A Fazer</h2>
+                <div class="lista" data-status="todo"></div>
+            </article>
+
+            <article class="coluna" id="doing">
+                <h2>Fazendo</h2>
+                <div class="lista" data-status="doing"></div>
+            </article>
+
+            <article class="coluna" id="done">
+                <h2>Concluido</h2>
+                <div class="lista" data-status="done"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
