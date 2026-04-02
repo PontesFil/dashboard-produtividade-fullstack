@@ -1,141 +1,103 @@
-# 🚀 Dashboard de Produtividade (Fullstack)
+# Dashboard de Produtividade (Fullstack)
 
-Aplicação web fullstack inspirada em um sistema Kanban, desenvolvida para gerenciamento de tarefas com persistência em banco de dados, drag-and-drop e experiência responsiva.
+Aplicacao web fullstack inspirada em um sistema Kanban, desenvolvida para gerenciamento de tarefas com persistencia em banco de dados, drag-and-drop e experiencia responsiva.
 
----
+## Sobre o projeto
 
-## 📌 Sobre o projeto
+Este projeto evoluiu de uma aplicacao frontend simples para uma arquitetura completa com backend, API REST e banco de dados MongoDB.
 
-Este projeto é a evolução de uma aplicação frontend simples para uma arquitetura completa com backend, API REST e banco de dados MongoDB.
+O objetivo foi simular um sistema real de produtividade, aplicando boas praticas de desenvolvimento, organizacao de codigo e experiencia do usuario.
 
-O objetivo foi simular um sistema real de produtividade, aplicando boas práticas de desenvolvimento, organização de código e experiência do usuário.
+## Funcionalidades
 
----
+- Criacao de tarefas
+- Edicao de tarefas
+- Remocao individual de tarefas
+- Limpar todas as tarefas
+- Drag and drop entre colunas
+- Suporte a toque para mobile e tablet
+- Persistencia em banco de dados com MongoDB
+- API REST completa
+- Tratamento de erros no frontend e backend
+- Layout responsivo
 
-## 🧠 Funcionalidades
+## Estrutura
 
-* ✅ Criação de tarefas
-* ✏️ Edição de tarefas
-* 🗑 Remoção individual de tarefas
-* 🧹 Limpar todas as tarefas
-* 🔄 Drag and drop entre colunas (Todo, Doing, Done)
-* 📱 Suporte a toque (mobile/tablet)
-* 💾 Persistência em banco de dados (MongoDB)
-* ⚙️ API REST completa (CRUD)
-* 🚦 Tratamento de erros no frontend e backend
-* 📊 Ordenação das tarefas
-* 🎯 Feedback visual no arraste
-* ♿ Estrutura semântica e acessibilidade
-
----
-
-## 🏗️ Arquitetura
-
-```bash
-📦 dashboard-produtividade
- ┣ 📂 backend
- ┃ ┣ 📄 server.js
- ┃ ┣ 📄 package.json
- ┃ ┗ 📂 node_modules
- ┣ 📂 frontend
- ┃ ┣ 📄 index.html
- ┃ ┣ 📄 style.css
- ┃ ┗ 📄 script.js
+```text
+dashboard-produtividade
+|- backend/
+|  |- server.js
+|  |- package.json
+|  `- package-lock.json
+|- frontend/
+|  |- index.html
+|  |- style.css
+|  `- script.js
+`- docs/
+   |- index.html
+   |- style.css
+   `- script.js
 ```
 
----
+- `frontend/`: copia de trabalho do frontend para desenvolvimento local.
+- `docs/`: frontend preparado para publicacao no GitHub Pages.
+- `backend/`: API e persistencia com MongoDB.
 
-## 🛠️ Tecnologias utilizadas
+## API REST
 
-### Frontend
+| Metodo | Rota | Descricao |
+| ------ | ---- | --------- |
+| GET | `/tasks` | Listar tarefas |
+| POST | `/tasks` | Criar nova tarefa |
+| PUT | `/tasks/:id` | Atualizar tarefa |
+| DELETE | `/tasks/:id` | Remover tarefa |
+| DELETE | `/tasks` | Remover todas as tarefas |
 
-* HTML5 (semântico)
-* CSS3 (responsivo)
-* JavaScript (ES6+)
+## Como rodar o projeto
 
 ### Backend
 
-* Node.js
-* Express
-
-### Banco de Dados
-
-* MongoDB (local)
-
----
-
-## 🔗 API REST
-
-| Método | Rota       | Descrição             |
-| ------ | ---------- | --------------------- |
-| GET    | /tasks     | Listar tarefas        |
-| POST   | /tasks     | Criar nova tarefa     |
-| PUT    | /tasks/:id | Atualizar tarefa      |
-| DELETE | /tasks/:id | Remover tarefa        |
-| DELETE | /tasks     | Remover todas tarefas |
-
----
-
-## ⚙️ Como rodar o projeto
-
-### 🔹 Backend
-
-```bash
-cd backend
+```powershell
+cd "E:\Workspace VSCode\dashboard-produtividade\backend"
 npm install
 npm start
 ```
 
-Servidor disponível em:
+Servidor disponivel em `http://localhost:3000`.
 
-```bash
-http://localhost:3000
-```
+### Frontend local
 
----
+Abra `frontend/index.html` no navegador ou utilize uma extensao como Live Server.
 
-### 🔹 Frontend
+## GitHub Pages com `docs/`
 
-Abra o arquivo:
+O frontend pode ser publicado no GitHub Pages usando a pasta `docs/` como origem. O arquivo principal publicado e `docs/index.html`.
 
-```bash
-frontend/index.html
-```
+Para habilitar o Pages:
 
-ou utilize uma extensão como Live Server.
+1. Abra o repositorio no GitHub.
+2. Acesse `Settings`.
+3. Entre em `Pages`.
+4. Em `Build and deployment`, escolha `Deploy from a branch`.
+5. Selecione a branch `main`.
+6. Selecione a pasta `/docs`.
+7. Salve a configuracao.
 
----
+## Backend separado
 
-## 💡 Diferenciais do projeto
+O backend continua separado na pasta `backend/` e nao faz parte da publicacao do GitHub Pages.
 
-* Evolução de frontend simples para fullstack real
-* Integração completa com API
-* Código organizado por responsabilidade
-* Experiência semelhante a aplicações reais (drag, feedback, responsividade)
-* Suporte mobile com interação por toque
-* Estrutura pronta para escalabilidade
+Localmente, a API segue em `http://localhost:3000/tasks`. Se no futuro o frontend publicado no GitHub Pages precisar conversar com um backend online, ajuste a URL da API em `frontend/script.js` e `docs/script.js`.
 
----
+## Observacoes sobre a publicacao
 
-## 🚀 Possíveis melhorias futuras
+- O frontend em `docs/` usa os mesmos arquivos do frontend local, copiados para a pasta publicada.
+- Os caminhos de `style.css` e `script.js` em `docs/index.html` continuam relativos e funcionam corretamente dentro de `docs/`.
+- Nao existem pastas extras de imagens, fontes ou assets no frontend atual para copiar.
 
-* 🔐 Autenticação de usuários (login)
-* 🌐 Deploy completo (frontend + backend)
-* 🧠 Integração com banco em nuvem (MongoDB Atlas)
-* 📌 Sistema de prioridades nas tarefas
-* 📊 Dashboard com métricas de produtividade
+## Proximos passos sugeridos
 
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por Felipe Pontes
-
----
-
-## 📈 Status do projeto
-
-✔ Funcional
-✔ Estruturado
-✔ Pronto para portfólio
-✔ Em evolução
+- Publicar um backend online para conectar ao GitHub Pages
+- Transformar o frontend em PWA
+- Integrar um banco em nuvem, como MongoDB Atlas
+- Adicionar autenticacao de usuarios
