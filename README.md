@@ -1,103 +1,169 @@
-# Dashboard de Produtividade (Fullstack)
+# 🚀 Dashboard de Produtividade (Fullstack)
 
-Aplicacao web fullstack inspirada em um sistema Kanban, desenvolvida para gerenciamento de tarefas com persistencia em banco de dados, drag-and-drop e experiencia responsiva.
+Aplicação web fullstack inspirada em um sistema Kanban, desenvolvida para gerenciamento de tarefas com persistência em banco de dados, drag-and-drop e experiência responsiva.
 
-## Sobre o projeto
+---
 
-Este projeto evoluiu de uma aplicacao frontend simples para uma arquitetura completa com backend, API REST e banco de dados MongoDB.
+## 🌐 Demo
 
-O objetivo foi simular um sistema real de produtividade, aplicando boas praticas de desenvolvimento, organizacao de codigo e experiencia do usuario.
+🔗 Frontend publicado:
+https://pontesfil.github.io/dashboard-produtividade-fullstack/
 
-## Funcionalidades
+---
 
-- Criacao de tarefas
-- Edicao de tarefas
-- Remocao individual de tarefas
-- Limpar todas as tarefas
-- Drag and drop entre colunas
-- Suporte a toque para mobile e tablet
-- Persistencia em banco de dados com MongoDB
-- API REST completa
-- Tratamento de erros no frontend e backend
-- Layout responsivo
+## 📌 Sobre o projeto
 
-## Estrutura
+Este projeto começou como uma aplicação frontend simples e evoluiu para uma arquitetura completa com backend, API REST e banco de dados MongoDB.
+
+O objetivo foi simular um sistema real de produtividade, aplicando boas práticas de desenvolvimento, organização de código e experiência do usuário.
+
+---
+
+## 🧠 Funcionalidades
+
+* Criação de tarefas
+* Edição de tarefas
+* Remoção individual de tarefas
+* Limpar todas as tarefas
+* Drag and drop entre colunas (Todo, Doing, Done)
+* Suporte a toque (mobile e tablet)
+* Persistência em MongoDB
+* API REST completa (CRUD)
+* Tratamento de erros no frontend e backend
+* Layout responsivo
+
+---
+
+## 🏗️ Estrutura do projeto
 
 ```text
-dashboard-produtividade
-|- backend/
-|  |- server.js
-|  |- package.json
-|  `- package-lock.json
-|- frontend/
-|  |- index.html
-|  |- style.css
-|  `- script.js
-`- docs/
-   |- index.html
-   |- style.css
-   `- script.js
+dashboard-produtividade-fullstack/
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── ...
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── docs/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+└── README.md
 ```
 
-- `frontend/`: copia de trabalho do frontend para desenvolvimento local.
-- `docs/`: frontend preparado para publicacao no GitHub Pages.
-- `backend/`: API e persistencia com MongoDB.
+### 📂 Organização
 
-## API REST
+* `frontend/`: ambiente de desenvolvimento local
+* `docs/`: versão do frontend publicada no GitHub Pages
+* `backend/`: API e persistência com MongoDB
 
-| Metodo | Rota | Descricao |
-| ------ | ---- | --------- |
-| GET | `/tasks` | Listar tarefas |
-| POST | `/tasks` | Criar nova tarefa |
-| PUT | `/tasks/:id` | Atualizar tarefa |
-| DELETE | `/tasks/:id` | Remover tarefa |
-| DELETE | `/tasks` | Remover todas as tarefas |
+---
 
-## Como rodar o projeto
+## 🔗 API REST
 
-### Backend
+| Método | Rota         | Descrição        |
+| ------ | ------------ | ---------------- |
+| GET    | `/tasks`     | Listar tarefas   |
+| POST   | `/tasks`     | Criar tarefa     |
+| PUT    | `/tasks/:id` | Atualizar tarefa |
+| DELETE | `/tasks/:id` | Remover tarefa   |
+| DELETE | `/tasks`     | Remover todas    |
 
-```powershell
-cd "E:\Workspace VSCode\dashboard-produtividade\backend"
+---
+
+## ⚙️ Como rodar o projeto
+
+### 🔹 Backend
+
+```bash
+cd backend
 npm install
 npm start
 ```
 
-Servidor disponivel em `http://localhost:3000`.
+Servidor:
 
-### Frontend local
+```
+http://localhost:3000
+```
 
-Abra `frontend/index.html` no navegador ou utilize uma extensao como Live Server.
+---
 
-## GitHub Pages com `docs/`
+### 🔹 Frontend
 
-O frontend pode ser publicado no GitHub Pages usando a pasta `docs/` como origem. O arquivo principal publicado e `docs/index.html`.
+Abra:
 
-Para habilitar o Pages:
+```
+frontend/index.html
+```
 
-1. Abra o repositorio no GitHub.
-2. Acesse `Settings`.
-3. Entre em `Pages`.
-4. Em `Build and deployment`, escolha `Deploy from a branch`.
-5. Selecione a branch `main`.
-6. Selecione a pasta `/docs`.
-7. Salve a configuracao.
+ou use Live Server.
 
-## Backend separado
+---
 
-O backend continua separado na pasta `backend/` e nao faz parte da publicacao do GitHub Pages.
+## 📄 GitHub Pages (Frontend)
 
-Localmente, a API segue em `http://localhost:3000/tasks`. Se no futuro o frontend publicado no GitHub Pages precisar conversar com um backend online, ajuste a URL da API em `frontend/script.js` e `docs/script.js`.
+O frontend foi preparado para publicação usando a pasta `docs/`.
 
-## Observacoes sobre a publicacao
+Para ativar:
 
-- O frontend em `docs/` usa os mesmos arquivos do frontend local, copiados para a pasta publicada.
-- Os caminhos de `style.css` e `script.js` em `docs/index.html` continuam relativos e funcionam corretamente dentro de `docs/`.
-- Nao existem pastas extras de imagens, fontes ou assets no frontend atual para copiar.
+1. Settings
+2. Pages
+3. Deploy from a branch
+4. Branch: `main`
+5. Folder: `/docs`
 
-## Proximos passos sugeridos
+---
 
-- Publicar um backend online para conectar ao GitHub Pages
-- Transformar o frontend em PWA
-- Integrar um banco em nuvem, como MongoDB Atlas
-- Adicionar autenticacao de usuarios
+## ⚠️ Backend separado
+
+O GitHub Pages publica apenas frontend (HTML, CSS e JS).
+
+O backend continua separado em:
+
+```
+backend/
+```
+
+Localmente, a API roda em:
+
+```
+http://localhost:3000/tasks
+```
+
+---
+
+## 💡 Diferenciais do projeto
+
+* Evolução de frontend simples para fullstack real
+* Integração completa com API
+* Drag-and-drop com suporte a toque
+* Código organizado por responsabilidade
+* Estrutura pronta para portfólio
+
+---
+
+## 🚀 Melhorias futuras
+
+* Deploy do backend (Render / Vercel / Railway)
+* Integração com MongoDB Atlas
+* Autenticação de usuários
+* Sistema de prioridades
+* Dashboard com métricas
+
+---
+
+## 👨‍💻 Autor
+
+Felipe Pontes
+
+---
+
+## 📈 Status
+
+✔ Funcional
+✔ Publicado
+✔ Pronto para portfólio
+✔ Em evolução
